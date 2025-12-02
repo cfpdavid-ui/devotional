@@ -4,9 +4,7 @@ Daily Devotional Generator
 Generates 10 devotionals from ministry content databases
 Output: Professional PDFs ready for distribution
 """
-st.write("Testing secrets...")
-st.write("API Key loaded:", "Yes" if "ANTHROPIC_API_KEY" in st.secrets else "No")
-import streamlit as st
+st.wriimport streamlit as st
 import sqlite3
 import anthropic
 from pathlib import Path
