@@ -26,8 +26,12 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Hardcoded API key
-ANTHROPIC_API_KEY = "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"
+# Get API key from Streamlit secrets
+try:
+    ANTHROPIC_API_KEY = st.secrets["ANTHROPIC_API_KEY"]
+except:
+    st.error("⚠️ API key not found! Add ANTHROPIC_API_KEY to Streamlit Secrets in app settings.")
+    st.stop()
 
 # ============================================================================
 # DATABASE UTILITIES
